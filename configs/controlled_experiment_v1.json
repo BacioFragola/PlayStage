@@ -1,0 +1,37 @@
+[
+    {
+        "turn": 1,
+        "character": "Martha",
+        "speaker_preset": "v2/en_speaker_9",
+        "text": "[sighs] Jesus... [gasp] H... Christ!",
+        "output_name": "data/martha_turn_1_controlled.wav"
+    },
+    {
+        "turn": 2,
+        "character": "George",
+        "speaker_preset": "v2/en_speaker_0",
+        "text": "[whispering] Shhhh... For God’s sake, Martha, it’s after two o’clock.",
+        "output_name": "data/george_turn_2_controlled.wav"
+    },
+    {
+        "turn": 3,
+        "character": "Martha",
+        "speaker_preset": "v2/en_speaker_9",
+        "text": "Oh, George! Well, I’m sorry, but... Oh, George!",
+        "output_name": "data/martha_turn_3_controlled.wav"
+    },
+    {
+        "turn": 4,
+        "character": "George",
+        "speaker_preset": "v2/en_speaker_0",
+        "text": "Well, I’m sorry, but... It’s late, you know? Late.",
+        "output_name": "data/george_turn_4_controlled.wav"
+    },
+    {
+        "turn": 5,
+        "character": "Martha",
+        "speaker_preset": "v2/en_speaker_9",
+        "text": "What a cluck! What a cluck you are. What a dump.",
+        "output_name": "data/martha_turn_5_controlled.wav"
+    }
+]
