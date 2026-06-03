@@ -1,0 +1,25 @@
+{
+  "segment_id": "vw_segment_001_george_martha_confrontation",
+  "corpus_title": "whos_afraid_of_virginia_woolf",
+  "segment_description": "A two-speaker confrontation segment between George and Martha.",
+  "turns": [
+    {
+      "turn_id": "t001",
+      "speaker": "george",
+      "plain_text": "PASTE_ORIGINAL_LINE_TEXT_HERE",
+      "punctuation_controlled_text": "PASTE_PUNCTUATION_CONTROLLED_VERSION_HERE",
+      "pause_controlled_text": "PASTE_PAUSE_CONTROLLED_VERSION_HERE",
+      "dramatic_best_effort_text": "PASTE_DRAMATIC_BEST_EFFORT_VERSION_HERE",
+      "performance_note": "restrained, ironic, emotionally pressured"
+    },
+    {
+      "turn_id": "t002",
+      "speaker": "martha",
+      "plain_text": "PASTE_ORIGINAL_LINE_TEXT_HERE",
+      "punctuation_controlled_text": "PASTE_PUNCTUATION_CONTROLLED_VERSION_HERE",
+      "pause_controlled_text": "PASTE_PAUSE_CONTROLLED_VERSION_HERE",
+      "dramatic_best_effort_text": "PASTE_DRAMATIC_BEST_EFFORT_VERSION_HERE",
+      "performance_note": "sharp, confrontational, volatile"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "experiment_name": "virginia_woolf_moss_generation",
+  "corpus_title": "whos_afraid_of_virginia_woolf",
+  "segment_id": "vw_segment_001_george_martha_confrontation",
+
+  "dialogue_script_path": "data/text/vw_segment_001_dialogue.json",
+
+  "model": {
+    "model_name": "MOSS-TTS-1.5",
+    "generation_mode": "line_by_line_character_voice_generation",
+    "notes": "Each dialogue turn is generated separately using a character-specific reference voice where available."
+  },
+
+  "characters": [
+    {
+      "character_id": "george",
+      "display_name": "George",
+      "voice_profile": "older_male_restrained_ironic",
+      "reference_audio_path": "data/audio/references/george_reference.wav"
+    },
+    {
+      "character_id": "martha",
+      "display_name": "Martha",
+      "voice_profile": "mature_female_forceful_volatile",
+      "reference_audio_path": "data/audio/references/martha_reference.wav"
+    }
+  ],
+
+  "generation_conditions": [
+    {
+      "condition_id": "plain_baseline",
+      "description": "Generate each dialogue turn with plain text only, using character-specific reference voices.",
+      "text_variant": "plain_text",
+      "num_takes": 3,
+      "output_dir": "data/audio/tts/plain_baseline"
+    },
+    {
+      "condition_id": "punctuation_controlled",
+      "description": "Generate each dialogue turn with punctuation adjusted to encourage dramatic rhythm and emphasis.",
+      "text_variant": "punctuation_controlled_text",
+      "num_takes": 3,
+      "output_dir": "data/audio/tts/punctuation_controlled"
+    },
+    {
+      "condition_id": "pause_controlled",
+      "description": "Generate each dialogue turn with explicit pause tags where supported by MOSS-TTS.",
+      "text_variant": "pause_controlled_text",
+      "num_takes": 3,
+      "output_dir": "data/audio/tts/pause_controlled"
+    },
+    {
+      "condition_id": "dramatic_best_effort",
+      "description": "Generate each dialogue turn using performance-state-informed punctuation, pause tags, and emphasis formatting.",
+      "text_variant": "dramatic_best_effort_text",
+      "num_takes": 5,
+      "output_dir": "data/audio/tts/dramatic_best_effort"
+    }
+  ],
+
+  "selection_protocol": {
+    "retain_all_takes_for_audit": true,
+    "exclude_instruction_leakage": true,
+    "exclude_repeated_or_missing_words": true,
+    "exclude_severe_pronunciation_errors": true,
+    "compare_duration_to_human_reference": true,
+    "check_character_voice_consistency": true
+  },
+
+  "outputs": {
+    "generation_queue_path": "outputs/tables/virginia_woolf_moss_generation_queue.csv",
+    "generation_metadata_path": "outputs/tables/virginia_woolf_moss_generation_metadata.csv",
+    "selected_best_effort_audio_path": "data/audio/tts/selected/virginia_woolf_best_effort_dialogue.wav"
+  }
+}
