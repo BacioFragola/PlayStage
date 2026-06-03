@@ -1,0 +1,17 @@
+{
+    "experiment_name": "virginia_woolf_real_vs_tts_baseline",
+    "corpus_title": "whos_afraid_of_virginia_woolf",
+    "segment_id": "vw_segment_001",
+    "comparison_type": "human-performance_vs_tts_baseline",
+
+    "human_tokens_path": "data/tokens/virginia_woolf_human_performance_tokens.npy",
+    "tts_tokens_path": "data/tokens/virginia_woolf_tts_baseline_tokens.py",
+
+    "output_figure_path": "outputs/figures/virginia_woolf_token_heatmap.png",
+    "output_metrics_path": "outputs/tables/virginia_woolf_token_metrics.csv",
+
+    "step_ms": 13.33,
+    "max_token_id":1023,
+    "colormap": "cividis",
+    "demo_if_missing": true
+}

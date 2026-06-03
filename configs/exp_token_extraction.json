@@ -1,0 +1,14 @@
+{
+  "experiment_name": "virginia_woolf_token_extraction",
+  "corpus_title": "whos_afraid_of_virginia_woolf",
+  "segment_id": "vw_segment_001",
+
+  "human_audio_path": "data/audio/human/virginia_woolf_human_performance.wav",
+  "tts_audio_path": "data/audio/tts/virginia_woolf_tts_baseline.wav",
+
+  "human_tokens_output_path": "data/tokens/virginia_woolf_human_performance_tokens.npy",
+  "tts_tokens_output_path": "data/tokens/virginia_woolf_tts_baseline_tokens.npy",
+
+  "codec_name": "encodec_24khz",
+  "target_sample_rate": 24000
+}

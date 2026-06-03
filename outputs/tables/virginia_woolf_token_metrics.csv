@@ -1,0 +1,17 @@
+sample,layer,num_time_steps,num_unique_tokens,entropy_bits,transition_rate,mean_run_length,max_run_length
+human_performance_reference,L1,1100,673,9.2194,0.9991,1.0009,2
+human_performance_reference,L2,1100,671,9.2284,0.9982,1.0018,2
+human_performance_reference,L3,1100,679,9.2327,0.9973,1.0027,2
+human_performance_reference,L4,1100,683,9.2568,0.9982,1.0018,2
+human_performance_reference,L5,1100,673,9.2335,1.0,1.0,1
+human_performance_reference,L6,1100,682,9.2473,0.9991,1.0009,2
+human_performance_reference,L7,1100,679,9.242,0.9982,1.0018,2
+human_performance_reference,L8,1100,662,9.1995,0.9991,1.0009,2
+tts_baseline_generation,L1,2500,895,8.9911,0.8407,1.1893,130
+tts_baseline_generation,L2,2500,891,9.0004,0.8411,1.1888,130
+tts_baseline_generation,L3,2500,895,8.9974,0.8403,1.1899,130
+tts_baseline_generation,L4,2500,885,8.9837,0.8407,1.1893,130
+tts_baseline_generation,L5,2500,892,8.9906,0.8407,1.1893,130
+tts_baseline_generation,L6,2500,896,9.0006,0.8411,1.1888,130
+tts_baseline_generation,L7,2500,896,9.0065,0.8411,1.1888,131
+tts_baseline_generation,L8,2500,897,9.008,0.8395,1.191,130
