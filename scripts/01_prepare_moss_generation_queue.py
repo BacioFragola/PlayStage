@@ -1,43 +1,14 @@
 import csv
 import json
-import sys
 from pathlib import Path
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.insert(0, str(PROJECT_ROOT))
-
-
 def load_json(path: str) -> dict:
-    """
-    Load a JSON file as a Python dictionary.
-
-    Research role:
-        This allows the generation experiment to be controlled by external
-        config and dialogue files instead of hard-coded values.
-    """
     with open(path, "r", encoding="utf-8") as file:
         return json.load(file)
 
 
 def get_character_map(characters: list[dict]) -> dict:
-    """
-    Convert the character list into a dictionary indexed by character_id.
-
-    Example:
-        [
-            {"character_id": "george", ...},
-            {"character_id": "martha", ...}
-        ]
-
-    becomes:
-        {
-            "george": {...},
-            "martha": {...}
-        }
-    """
     character_map = {}
 
     for character in characters:
@@ -55,12 +26,6 @@ def build_output_audio_path(
     speaker: str,
     take_number: int,
 ) -> str:
-    """
-    Build a clear output filename for each generated audio file.
-
-    Example:
-        vw_segment_001_george_martha_confrontation_plain_baseline_t001_george_take_01.wav
-    """
     filename = (
         f"{segment_id}_{condition_id}_{turn_id}_{speaker}_"
         f"take_{take_number:02d}.wav"
@@ -70,20 +35,8 @@ def build_output_audio_path(
 
 
 def build_generation_queue(config: dict, dialogue: dict) -> list[dict]:
-    """
-    Build a generation queue from:
-        1. experiment config
-        2. dialogue script
-
-    Each row represents one MOSS-TTS generation job.
-
-    Research role:
-        This makes the generation process auditable:
-        each output audio file can be traced back to a speaker, turn,
-        condition, text variant, reference voice, and take number.
-    """
     character_map = get_character_map(config["characters"])
-    segment_id = config["segment_id"]
+    segment_id = dialogue["segment_id"]
 
     queue_rows = []
 
@@ -99,7 +52,7 @@ def build_generation_queue(config: dict, dialogue: dict) -> list[dict]:
 
             if speaker not in character_map:
                 raise ValueError(
-                    f"Speaker '{speaker}' in dialogue is not defined in config characters."
+                    f"Speaker '{speaker}' is not defined in config characters."
                 )
 
             if text_variant not in turn:
@@ -142,11 +95,6 @@ def build_generation_queue(config: dict, dialogue: dict) -> list[dict]:
 
 
 def save_queue_csv(rows: list[dict], output_path: str) -> None:
-    """
-    Save the generation queue as a CSV table.
-
-    This CSV is the formal generation plan for MOSS-TTS.
-    """
     output = Path(output_path)
     output.parent.mkdir(parents=True, exist_ok=True)
 

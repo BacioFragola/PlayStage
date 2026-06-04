@@ -31,29 +31,8 @@
       "condition_id": "plain_baseline",
       "description": "Generate each dialogue turn with plain text only, using character-specific reference voices.",
       "text_variant": "plain_text",
-      "num_takes": 3,
+      "num_takes": 1,
       "output_dir": "data/audio/tts/plain_baseline"
-    },
-    {
-      "condition_id": "punctuation_controlled",
-      "description": "Generate each dialogue turn with punctuation adjusted to encourage dramatic rhythm and emphasis.",
-      "text_variant": "punctuation_controlled_text",
-      "num_takes": 3,
-      "output_dir": "data/audio/tts/punctuation_controlled"
-    },
-    {
-      "condition_id": "pause_controlled",
-      "description": "Generate each dialogue turn with explicit pause tags where supported by MOSS-TTS.",
-      "text_variant": "pause_controlled_text",
-      "num_takes": 3,
-      "output_dir": "data/audio/tts/pause_controlled"
-    },
-    {
-      "condition_id": "dramatic_best_effort",
-      "description": "Generate each dialogue turn using performance-state-informed punctuation, pause tags, and emphasis formatting.",
-      "text_variant": "dramatic_best_effort_text",
-      "num_takes": 5,
-      "output_dir": "data/audio/tts/dramatic_best_effort"
     }
   ],
 

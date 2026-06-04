@@ -1,2 +1,5 @@
-segment_id,source_audio_path,start_sec,end_sec,output_audio_path,speakers,description
-vw_segment_001_george_martha_confrontation,data/audio/source/virginia_woolf_full.wav,755.20,798.70,data/audio/human_segments/vw_segment_001_human.wav,george;martha,George and Martha confrontation with escalating tension
+segment_id,human_audio_path,cutting_method,start_sec,end_sec,speakers,description,
+vw_segment_001,data/audio/human_segments/vw_segment_001_human.wav,manual,,,george;martha,,
+vw_segment_002,data/audio/human_segments/vw_segment_002_human.wav,manual,,,george;martha,,
+vw_segment_003,data/audio/human_segments/vw_segment_003_human.wav,manual,,,george;martha,,
+vw_segment_004,data/audio/human_segments/vw_segment_004_human.wav,manual,,,george;martha,,
