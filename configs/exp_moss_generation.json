@@ -31,7 +31,7 @@
       "condition_id": "plain_baseline",
       "description": "Generate each dialogue turn with plain text only, using character-specific reference voices.",
       "text_variant": "plain_text",
-      "num_takes": 1,
+      "num_takes": 3,
       "output_dir": "data/audio/tts/plain_baseline"
     }
   ],
